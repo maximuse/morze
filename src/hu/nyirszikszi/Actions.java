@@ -45,7 +45,8 @@ class Actions {
                 if (abc.getLetter() == c) {
                     msg = "A(z) \"" + c + "\" karakter Morze kódja: " + abc.getSignal();
                     break;
-                } else {
+                }
+                else {
                     msg = "A(z) \"" + c + "\" karakter Morze kódja nem található a kódtárban!";
                 }
             }

@@ -13,9 +13,11 @@ class Actions {
             String row = raf.readLine();
             row = raf.readLine();
             String[] slices;
+            String utf;
 
             while (row != null) {
-                slices = row.split("\t");
+                utf = new String(row.getBytes("ISO-8859-1"), "UTF-8");
+                slices = utf.split("\t");
 
                 morseABC.add(new MorseABC(slices[0].charAt(0), slices[1]));
 
@@ -42,10 +44,10 @@ class Actions {
 
             for (MorseABC abc : morseABC) {
                 if (abc.getLetter() == c) {
-                    msg = "A(z) " + c + " karakter Morze kódja: " + abc.getSignal();
+                    msg = "A(z) \"" + c + "\" karakter Morze kódja: " + abc.getSignal();
                     break;
                 } else {
-                    msg = "Nem található a kódtárban ilyen karakter!";
+                    msg = "A(z) \"" + c + "\" karakter Morze kódja nem található a kódtárban!";
                 }
             }
 

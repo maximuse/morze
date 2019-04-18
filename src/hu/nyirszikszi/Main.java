@@ -10,8 +10,10 @@ public class Main {
         }*/
 
         System.out.println("3. feladat:\nA Morze abc " + morseABC.size() + " db karakter kódját tartalmazza.");
+        System.out.println();
 
         System.out.println("4. feladat:");
         Actions.char2Signal(morseABC);
+        System.out.println();
     }
 }

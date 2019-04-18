@@ -38,8 +38,7 @@ class Actions {
             Scanner s = new Scanner(System.in);
 
             System.out.print("Kérek egy karaktert: ");
-            char c = s.next().charAt(0);
-            c = Character.toLowerCase(c);
+            char c = new Scanner(System.in).next().toLowerCase().charAt(0);
             String msg = "";
 
             for (MorseABC abc : morseABC) {
@@ -50,6 +49,8 @@ class Actions {
                     msg = "A(z) \"" + c + "\" karakter Morze kódja nem található a kódtárban!";
                 }
             }
+
+            s.close();
 
             System.out.println(msg);
         }
